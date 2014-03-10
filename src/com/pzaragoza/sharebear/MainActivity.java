@@ -37,7 +37,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		// Add data to the intent, the receiving app will decide what to do with it.
 		intent.putExtra(Intent.EXTRA_SUBJECT, "Some Subject Line");
-		intent.putExtra(Intent.EXTRA_TEXT, "Body of the message, woot!");
+		intent.putExtra(Intent.EXTRA_TEXT, "How's it going? Sharebear");
 		
 		startActivity(intent);
 	}
