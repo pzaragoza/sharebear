@@ -21,6 +21,42 @@ public class MainActivity extends Activity implements OnClickListener {
 		button2 = (Button) this.findViewById(R.id.button2);
 		button2.setOnClickListener(this);
 		
+		button3 = (Button) this.findViewById(R.id.button3);
+		button3.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(android.content.Intent.ACTION_SEND);
+				intent.setType("text/plain");
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+
+				// Add data to the intent, the receiving app will decide what to do with it.
+				intent.putExtra(Intent.EXTRA_SUBJECT, "P.S. Will you...");
+				intent.putExtra(Intent.EXTRA_TEXT, "P.S. Will you ");
+				
+				startActivity(intent);
+			}
+		});
+		button1 = (Button) this.findViewById(R.id.button1);
+		button1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(android.content.Intent.ACTION_SEND);
+				intent.setType("text/plain");
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+
+				// Add data to the intent, the receiving app will decide what to do with it.
+				intent.putExtra(Intent.EXTRA_SUBJECT, "P.S. I love...");
+				intent.putExtra(Intent.EXTRA_TEXT, "P.S. I love ");
+				
+				startActivity(intent);
+			}
+		});
+		
+		
 	}
 
 	@Override
@@ -38,8 +74,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
 
 		// Add data to the intent, the receiving app will decide what to do with it.
-		intent.putExtra(Intent.EXTRA_SUBJECT, "P.S. I love...");
-		intent.putExtra(Intent.EXTRA_TEXT, "P.S. I love ");
+		intent.putExtra(Intent.EXTRA_SUBJECT, "P.S. Have you ever...");
+		intent.putExtra(Intent.EXTRA_TEXT, "P.S. Have you ever ");
 		
 		startActivity(intent);
 	}
