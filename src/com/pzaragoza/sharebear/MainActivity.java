@@ -9,15 +9,17 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class MainActivity extends Activity implements OnClickListener {
-	Button button1; 
+	Button button2; 
+	Button button3;
+	Button button1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		button1 = (Button) this.findViewById(R.id.button1);
-		button1.setOnClickListener(this);
+		button2 = (Button) this.findViewById(R.id.button2);
+		button2.setOnClickListener(this);
 		
 	}
 
@@ -36,8 +38,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
 
 		// Add data to the intent, the receiving app will decide what to do with it.
-		intent.putExtra(Intent.EXTRA_SUBJECT, "Some Subject Line");
-		intent.putExtra(Intent.EXTRA_TEXT, "How's it going? Sharebear");
+		intent.putExtra(Intent.EXTRA_SUBJECT, "P.S. I love...");
+		intent.putExtra(Intent.EXTRA_TEXT, "P.S. I love ");
 		
 		startActivity(intent);
 	}

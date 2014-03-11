@@ -4,23 +4,12 @@
     android:background="@drawable/background_postscript" >
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="53dp"
-        android:background="@android:color/transparent"
-        android:text="@string/will_me" />
-
-    <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/button3"
-        android:layout_marginLeft="51dp"
-        android:layout_marginTop="69dp"
+        android:layout_marginTop="49dp"
         android:background="@android:color/transparent"
         android:text="@string/love_me" />
 
@@ -29,9 +18,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button1"
-        android:layout_marginTop="63dp"
-        android:layout_toRightOf="@+id/button1"
+        android:layout_marginTop="61dp"
+        android:layout_toRightOf="@+id/button2"
         android:background="@android:color/transparent"
         android:text="@string/have_me" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="61dp"
+        android:background="@android:color/transparent"
+        android:text="@string/will_me" />
 
 </RelativeLayout>
